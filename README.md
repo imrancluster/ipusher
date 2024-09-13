@@ -28,7 +28,7 @@ func main() {
 ### Clients
 Clients can connect using the following API:
 ```
-https://localhost:8088/api/v1/ws/[CHANNEL_NAME]?user_id=[USER_ID]
+http://localhost:8088/api/v1/ws/[CHANNEL_NAME]?user_id=[USER_ID]
 ```
 
 ### Testing
@@ -98,4 +98,15 @@ curl -X POST http://localhost:8088/api/v1/broadcast \
   }
   </style>
   
+```
+
+### Test with a Simple WebSocket Client
+**Install wscat:**
+```bash
+npm install -g wscat
+```
+
+**Connect to your WebSocket server:**
+```bash
+wscat -c ws://localhost:8088/api/v1/ws/[CHANNEL_NAME]?user_id=[USER_ID]
 ```

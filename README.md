@@ -40,6 +40,11 @@ curl -X POST http://localhost:8088/api/v1/broadcast \
 ```
 
 ### VueJS Example
+**Install Dependencies**
+```bash
+npm install vue-socket.io
+```
+
 ```js
 <template>
     <div>

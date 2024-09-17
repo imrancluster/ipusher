@@ -13,6 +13,7 @@ var upgrader = websocket.Upgrader{}
 var broadcast = make(chan BroadcastMessage)
 var clients = make(map[*Client]bool)
 var mutex sync.Mutex
+var inActiveMessages = make(map[string]BroadcastMessage)
 
 type Client struct {
 	conn    *websocket.Conn
